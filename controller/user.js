@@ -6,7 +6,7 @@ exports.Secure =  async function(req, res, next) {
     try {
         let token = req.headers.authorization
         if(!token){
-          throw new Error('please attach token..!')
+          throw new Error('please attach data Token..!')
         }
         var decoded = jwt.verify(token, 'VIRTUAL')
         console.log(decoded);
